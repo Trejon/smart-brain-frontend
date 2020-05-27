@@ -14,4 +14,11 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.unregister();
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Modal />
+//   </React.StrictMode>,
+//   document.getElementById('modal-root')
+// );
+
+serviceWorker.register();
