@@ -93,8 +93,8 @@ class App extends React.Component {
     this.setState({
       imageUrl: this.state.input
     })
-    fetch('https://enigmatic-badlands-69734.herokuapp.com/imageurl', {
-      // fetch('http://localhost:3000/imageurl', {
+    // fetch('https://enigmatic-badlands-69734.herokuapp.com/imageurl', {
+      fetch('http://localhost:3000/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -104,8 +104,8 @@ class App extends React.Component {
     .then(response => response.json())
     .then(response => {
       if (response) {
-        fetch('https://enigmatic-badlands-69734.herokuapp.com/image', {
-          // fetch('http://localhost:3000/image', {
+        // fetch('https://enigmatic-badlands-69734.herokuapp.com/image', {
+          fetch('http://localhost:3000/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
