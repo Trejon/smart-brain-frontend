@@ -36,7 +36,7 @@ const initialState = {
     imageUrl: '',
     boxes: [],
     route: 'home',
-    isSignedIn: false, 
+    isSignedIn: true, 
     user: {
       id: '',
       name: '', 
@@ -127,7 +127,7 @@ class App extends React.Component {
 
     onRouteChange = (route) => {
       if (route === 'signout') {
-        this.setState(initialState)
+        return this.setState(initialState)
        } else if (route === 'home') {
           this.setState({
             isSignedIn: true
