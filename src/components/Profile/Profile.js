@@ -15,10 +15,13 @@ class Profile extends React.Component {
     switch(event.target.name) {
       case 'user-name':
         this.setState({name: event.target.value})
+        break;
       case 'user-age':
         this.setState({age: event.target.value})
+        break;
       case 'user-pet': 
         this.setState({pet: event.target.value})
+        break;
       default: 
         return
     }
