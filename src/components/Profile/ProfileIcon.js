@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import { 
-  Dropdown, 
-  DropdownToggle, 
-  DropdownMenu, 
-  DropdownItem 
-} from 'reactstrap';
-import './ProfileIcon.css';
+import React, { Component } from "react";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
+import "./ProfileIcon.css";
 
 class ProfileIcon extends Component {
   constructor(props) {
-    super(props); 
+    super(props);
     this.state = {
-      dropdownOpen: false
-    }
+      dropdownOpen: false,
+    };
   }
 
   toggle = () => {
-    this.setState(prevState => ({
-      dropdownOpen: !prevState.dropdownOpen
+    this.setState((prevState) => ({
+      dropdownOpen: !prevState.dropdownOpen,
     }));
-  }
+  };
 
   render() {
     return (
@@ -28,20 +28,29 @@ class ProfileIcon extends Component {
           <DropdownToggle
             tag="span"
             data-toggle="dropdown"
-            aria-expanded={this.state.dropdownOpen}>
-              <img 
-                src="http://tachyons.io/img/logo.jpg"
-                className="br-100 ba h3 w3 dib" 
-                alt="avatar"
-              />
+            aria-expanded={this.state.dropdownOpen}
+          >
+            <img
+              src="http://tachyons.io/img/logo.jpg"
+              className="br-100 ba h3 w3 dib"
+              alt="avatar"
+            />
           </DropdownToggle>
-      
+
           <DropdownMenu
-            className="b--transparent shadow-5 dropdown-menu-right" 
-            style={{marginTop: '20px', backgroundColor: 'rgba(255, 255, 255, 0.5'}}>
-              {/* <DropdownItem header>Options</DropdownItem> */}
-              <DropdownItem onClick={this.props.toggleModal}>View Profile</DropdownItem>
-              <DropdownItem onClick={() => this.props.onRouteChange('signout')}>Sign Out</DropdownItem>
+            className="b--transparent shadow-5 dropdown-menu-right"
+            style={{
+              marginTop: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.5",
+            }}
+          >
+            {/* <DropdownItem header>Options</DropdownItem> */}
+            <DropdownItem onClick={this.props.toggleModal}>
+              View Profile
+            </DropdownItem>
+            <DropdownItem onClick={() => this.props.onRouteChange("signout")}>
+              Sign Out
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </div>
